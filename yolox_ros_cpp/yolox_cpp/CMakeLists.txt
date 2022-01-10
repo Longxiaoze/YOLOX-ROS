@@ -44,6 +44,7 @@ if(YOLOX_USE_TENSORRT)
   if( CUDA_FOUND AND NVINFER AND NVINFERPLUGIN AND NVPARSERS AND NVONNXPARSER )
     set(ENABLE_TENSORRT ON)
     set(SRC ${SRC} src/yolox_tensorrt.cpp)
+    message(STATUS "TensorRT enabled")
   endif()
 endif()
 

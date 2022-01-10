@@ -15,7 +15,7 @@ if [ ! -e $ONNX_MODEL_PATH ]; then
     $SCRIPT_DIR/../onnx/download.bash $MODEL
 fi
 
-trtexec --onnx=$SCRIPT_DIR/../../onnx/$MODEL.onnx \
+/usr/src/tensorrt/bin/trtexec --onnx=$SCRIPT_DIR/../../onnx/$MODEL.onnx \
         --saveEngine=$SCRIPT_DIR/$MODEL.trt --fp16 --verbose --workspace=100000
 
 echo "=========================================="
